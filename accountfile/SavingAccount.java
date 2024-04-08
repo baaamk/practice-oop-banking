@@ -9,9 +9,11 @@ public class SavingAccount extends Account{
         this.targetAmount = targetAmount;
         this.accountType = "S";
     }
+
     public BigDecimal getTargetAmount() {
         return targetAmount;
     }
+
     public String getAccountInfo(){
         return getAccountInfo() + "\n" + targetAmount;
     }

@@ -92,6 +92,7 @@ public class Bank {
 
             System.out.printf("송금액 %s원이 정상적으로 처리되었습니다.\n", value);
         }
+
         public void createAccount() {
             System.out.println("계좌 번호를 입력하세요.");
             String accountNumber = scanner.next();
