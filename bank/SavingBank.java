@@ -11,4 +11,3 @@ public class SavingBank extends Bank{
         BigDecimal goalAmount = account.getTargetAmount();
     }
 }
-
