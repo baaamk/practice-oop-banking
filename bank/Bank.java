@@ -22,7 +22,6 @@ public class Bank {
     }
 
     //기능 구현
-    //출금부터
     public class BankService {
 
         private Scanner scanner = new Scanner(System.in);
