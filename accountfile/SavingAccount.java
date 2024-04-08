@@ -1,4 +1,4 @@
-package Accountfile;
+package accountfile;
 
 import java.math.BigDecimal;
 
@@ -8,6 +8,9 @@ public class SavingAccount extends Account{
         super(accountNumber,owner,balance);
         this.targetAmount = targetAmount;
         this.accountType = "S";
+    }
+    public BigDecimal getTargetAmount() {
+        return targetAmount;
     }
     public String getAccountInfo(){
         return getAccountInfo() + "\n" + targetAmount;
