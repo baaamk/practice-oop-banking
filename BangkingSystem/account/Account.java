@@ -1,6 +1,7 @@
 package BangkingSystem.account;
 
-import lombok.Setter;
+import BangkingSystem.exceptions.DepositException;
+import BangkingSystem.exceptions.WithdrawException;
 
 import java.math.BigDecimal;
 
@@ -63,13 +64,21 @@ public class Account {
         //balance 수정 필요
     }
 
-    public BigDecimal withdraw(BigDecimal amount){
-
+    public BigDecimal withdraw(BigDecimal amount) throws WithdrawException {
+        if (this.balance.compareTo(amount) < 0){
+            throw new WithdrawException("잔액이 모자랍니다");
+        } else {
+            this.balance.subtract(amount);
+        }
         return amount;
     }
 
-    public BigDecimal deposit(BigDecimal amount){
-
+    public BigDecimal deposit(BigDecimal amount) throws DepositException {
+        try{
+            this.balance.add(amount);
+        } catch (Exception e){
+            throw new DepositException(e.getMessage());
+        }
         return amount;
     }
 }
